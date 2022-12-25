@@ -6,7 +6,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 require('dotenv').config()
-const port = 5000 || process.env.PORT
+const port = process.env.PORT || 5000
 
 const userRouter = require('./routes/user')
 const notesRouter= require('./routes/notes')
