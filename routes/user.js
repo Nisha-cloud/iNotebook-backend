@@ -10,7 +10,7 @@ router.post('/users', async(req,res) => {
         
         const token = await user.generateAuthToken()
         const saveduser = await user.save()
-        // const newNotes = await Note.find({user: req.user._id})
+        
         // console.log({nisha: token})
         res.status(201).json({token: token})
     } catch (error) {
